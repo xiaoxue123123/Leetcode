@@ -1,0 +1,54 @@
+s = "ababbc"
+k = 2
+#
+# d,l = {},0
+# max_l = 0
+#
+# for i in s:
+#     if i in d:
+#         d[i] += 1
+#     else:
+#         d[i] =1
+#     if d[i] >= k:
+#         l +=1
+
+
+# def longestSubstring(self, s, k):
+#     if len(s) < k:
+#         print(0)
+#     c = min(set(s), key=s.count)
+#     if s.count(c) >= k:
+#         print(len(s))
+#     print(max(self.longestSubstring(t, k) for t in s.split(c)))
+
+
+def longestSubstring(s, k):
+    #if len(s) < k:
+        #print(0)
+    st = set(s)
+    if len(s) < k:
+        return 0
+    # if s is None:
+    #     return(0)
+    for c in st:
+        if s.count(c) < k:
+            print('c is',c)
+            print('s.split(c)',s.split(c))
+            for t in s.split(c):
+                print('t is',t)
+                print('type(t)',type(t))
+                return max(self.longestSubstring(t, k) for t in s.split(c))
+                print('longestSubstring(t, k)',longestSubstring(t, k))
+    print('len(s)',len(s))
+    return(len(s))
+
+
+# def longestSubstring(s, k):
+#     if len(s) < k:
+#         return 0
+#     c = min(set(s), key=s.count)
+#     if s.count(c) >= k:
+#         return len(s)
+#     return max(longestSubstring(t, k) for t in s.split(c))
+
+#['', 'b', 'bbc']

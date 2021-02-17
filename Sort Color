@@ -1,0 +1,46 @@
+nums = [2,0,2,1,1,0]
+#nums = [2,0,1]
+p0 = 0
+p2 = len(nums)-1
+p = 0
+while p<=p2:
+    print('nums original',nums)
+    if nums[p] == 0:
+        tmp = nums[p0]
+        nums[p0] = nums[p]
+        nums[p] = tmp
+        p0 += 1
+        p += 1
+    elif nums[p] == 2:
+        tmp = nums[p2]
+        nums[p2] = nums[p]
+        nums[p] = tmp
+        p2 -= 1
+    else:
+        p+=1
+    # print('p',p,'p0',p0,'p2',p2)
+    # print('nums',nums)
+
+print(nums)
+
+
+
+#
+#tmp2 = []
+# tmp0 = []
+# tmp1 = []
+# while nums:
+#     n = nums.pop()
+#     if n == 2:
+#         tmp2.append(2)
+#     elif n == 0:
+#         tmp0.append(0)
+#     else:
+#         tmp1.append(1)
+#
+
+# nums_s = sorted(nums)
+#
+# for index,n in enumerate(nums):
+#     nums[index] = nums_s[index]
+

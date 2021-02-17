@@ -1,0 +1,24 @@
+haystack = "aaaaa"
+needle = "bba"
+
+l = len(haystack)
+alert = False
+l_needle = len(needle)
+i = 0
+
+if i == '':
+    print(0)
+
+while i < l:
+    if haystack[i] == needle[0]:
+        alert == True
+        if haystack[i:i+l_needle] == needle:
+            print(i)
+            break
+        else:
+            i+=1
+    else:
+        i += 1
+
+if i == l:
+    print(-1)
